@@ -8,7 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .font-mono-strict { font-family: 'JetBrains Mono', 'Courier New', Courier, monospace; }
+        .font-mono-diagram { 
+            font-family: 'JetBrains Mono', 'Courier New', Courier, monospace; 
+            letter-spacing: 0px;
+        }
         .table-custom th, .table-custom td { padding: 12px 16px; border-bottom: 1px solid #e2e8f0; text-align: left; }
         .table-custom th { background-color: #f8fafc; font-weight: 600; color: #1e293b; }
         .table-custom tr:hover { background-color: #f8fafc; }
@@ -16,7 +19,7 @@
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col">
 
-    <!-- Top Header với Logo KiotViet -->
+    <!-- Top Header với Logo KiotViet chuẩn nhận diện -->
     <header class="bg-[#1a56db] text-white shadow-md fixed top-0 left-0 right-0 z-50 h-16 flex items-center px-4 justify-between">
         <div class="flex items-center gap-3 overflow-hidden">
             <button id="sidebarToggle" class="p-2 hover:bg-blue-700 rounded-lg transition-colors flex-shrink-0" title="Mở/Đóng menu">
@@ -42,35 +45,39 @@
             <div>
                 <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 px-3">MỤC LỤC</div>
                 <nav class="space-y-1 text-sm font-medium">
-                    <a href="#muc-dich-pham-vi" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-blue-700 bg-blue-50 font-semibold transition-colors nav-link">
+                    <a href="#thong-tin-tai-lieu" class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition-colors nav-link">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        Thông tin tài liệu
+                    </a>
+                    <a href="#muc-dich-pham-vi" class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition-colors nav-link">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         1. Mục đích và Phạm vi
                     </a>
-                    <a href="#tong-quan" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition-colors nav-link">
+                    <a href="#tong-quan" class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition-colors nav-link">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                         2. Tổng quan quy trình
                     </a>
-                    <a href="#so-do" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition-colors nav-link">
+                    <a href="#so-do" class="flex items-center gap-3 px-3 py-2 rounded-lg text-blue-700 bg-blue-50 font-semibold transition-colors nav-link">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
                         3. Sơ đồ tổng thể
                     </a>
-                    <a href="#chi-tiet-phase" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition-colors nav-link">
+                    <a href="#chi-tiet-phase" class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition-colors nav-link">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
                         4. Chi tiết 3 Phase
                     </a>
-                    <a href="#quality-gates" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition-colors nav-link">
+                    <a href="#quality-gates" class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition-colors nav-link">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                         5. Quality Gates
                     </a>
-                    <a href="#raci" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition-colors nav-link">
+                    <a href="#raci" class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition-colors nav-link">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                         6. RACI Matrix tổng hợp
                     </a>
-                    <a href="#nguyen-tac" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition-colors nav-link">
+                    <a href="#nguyen-tac" class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition-colors nav-link">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                         7. Nguyên tắc cốt lõi
                     </a>
-                    <a href="#links" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition-colors nav-link">
+                    <a href="#links" class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition-colors nav-link">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
                         8. Links đến sổ tay chi tiết
                     </a>
@@ -80,6 +87,67 @@
 
         <!-- Main Content Area -->
         <main class="flex-1 md:ml-72 p-6 md:p-10 space-y-12 max-w-6xl mx-auto w-full">
+
+            <!-- THÔNG TIN TÀI LIỆU VÀ BẢNG SỬA ĐỔI (Trang 1 PDF) -->
+            <section id="thong-tin-tai-lieu" class="bg-white rounded-xl shadow-sm p-6 md:p-8 border border-slate-200 space-y-6">
+                <div class="border border-slate-300 rounded-lg overflow-hidden">
+                    <table class="w-full text-sm">
+                        <tbody>
+                            <tr class="border-b border-slate-300">
+                                <td rowspan="2" class="w-1/3 p-4 bg-slate-50 border-r border-slate-300 text-center font-bold text-slate-800">
+                                    <img src="https://i.postimg.cc/Rh11fRng/Kiot-Viet-Logo-Horizontal-L.png" alt="KiotViet Logo" class="h-8 mx-auto object-contain mb-2">
+                                    QUY TRÌNH PHÁT TRIỂN SẢN PHẨM
+                                </td>
+                                <td class="p-3 border-r border-slate-300 font-semibold bg-slate-50 w-1/4">MÃ HIỆU:</td>
+                                <td class="p-3 font-mono text-slate-700">QTPTPM-BDD-01</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 border-r border-slate-300 font-semibold bg-slate-50">LẦN BAN HÀNH/SỬA ĐỔI:</td>
+                                <td class="p-3">
+                                    <div class="font-medium text-slate-800">1.1</div>
+                                    <div class="text-xs text-slate-500">Ngày hiệu lực: 20/10/2026</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="space-y-3">
+                    <h3 class="text-base font-bold text-slate-900 uppercase">BẢNG THEO DÕI SỬA ĐỔI</h3>
+                    <div class="overflow-x-auto">
+                        <table class="table-custom w-full text-sm">
+                            <thead>
+                                <tr>
+                                    <th>Ngày ban hành/sửa đổi</th>
+                                    <th>Phiên bản</th>
+                                    <th>Mô tả</th>
+                                    <th>Tác giả</th>
+                                    <th>Xem xét</th>
+                                    <th>Người duyệt</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-slate-600">--</td>
+                                    <td class="font-bold text-blue-700">1.0</td>
+                                    <td>Phiên bản ban đầu</td>
+                                    <td>--</td>
+                                    <td>--</td>
+                                    <td>--</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-slate-600">--</td>
+                                    <td class="font-bold text-blue-700">1.1</td>
+                                    <td>Cập nhật Phase 1 và Phase 2</td>
+                                    <td>--</td>
+                                    <td>--</td>
+                                    <td>--</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
 
             <!-- 1. Mục đích và Phạm vi -->
             <section id="muc-dich-pham-vi" class="bg-white rounded-xl shadow-sm p-6 md:p-8 border border-slate-200 space-y-6">
@@ -185,87 +253,88 @@
                 </div>
             </section>
 
-            <!-- 3. Sơ đồ tổng thể -->
+            <!-- 3. Sơ đồ tổng thể (Master Flow Diagram) -->
             <section id="so-do" class="bg-white rounded-xl shadow-sm p-6 md:p-8 border border-slate-200 space-y-6">
                 <h2 class="text-xl font-bold text-slate-900 border-l-4 border-[#1a56db] pl-3">3. SƠ ĐỒ TỔNG THỂ</h2>
 
                 <div class="space-y-4">
                     <div class="flex items-center justify-between">
                         <h3 class="text-base font-semibold text-slate-800">3.1 Master Flow Diagram</h3>
-                        <span class="text-xs bg-slate-100 text-slate-500 font-medium px-2 py-1 rounded">Căn chỉnh Monospace chuẩn 100%</span>
+                        <span class="text-xs bg-blue-100 text-blue-800 font-semibold px-2.5 py-1 rounded">Khung lớn chuẩn - Đầy đủ 100% nội dung</span>
                     </div>
 
-                    <!-- Khung Master Flow đã căn thẳng tuyệt đối -->
-                    <div class="bg-slate-900 text-slate-100 p-4 md:p-6 rounded-xl font-mono-strict text-[11px] md:text-xs overflow-x-auto whitespace-pre leading-relaxed shadow-inner">===============================================================================================
-                       QUY TRÌNH PHÁT TRIỂN SẢN PHẨM THEO BDD - KiotViet
-                                         (MASTER FLOW)
-===============================================================================================
+                    <!-- KHUNG SƠ ĐỒ TO - CHỨA TOÀN BỘ NỘI DUNG VÀ THẲNG 100% -->
+                    <div class="bg-slate-900 text-slate-100 p-4 md:p-6 rounded-xl font-mono-diagram text-[11px] md:text-xs overflow-x-auto whitespace-pre leading-relaxed shadow-xl border border-slate-800">=====================================================================================================================================================
+                                                  QUY TRÌNH PHÁT TRIỂN SẢN PHẨM THEO BDD - KiotViet
+                                                                    (MASTER FLOW)
+=====================================================================================================================================================
 
-╔═════════════════════════════════════════════════════════════════════════════════════════════╗
-║  PHASE 1: DISCOVERY & DEFINE SOLUTION                                                       ║
-║  Sổ tay: QTPTPM - SỔ TAY CHI TIẾT - DISCOVERY & DEFINE SOLUTION PHASE                       ║
-╠═════════════════════════════════════════════════════════════════════════════════════════════╣
-║                                                                                             ║
-║     Step 1          ->     Step 2          ->     Step 3          ->     Step 4          ->     Step 5      ║
-║  Identify               Discover &              Build &                 Solution                Develop     ║
-║  Problems               Define Sol.             Validate                Design & BR             UI/UX       ║
-║      |                      |                       |                       |                      |        ║
-║      v                      v                       v                       v                      v        ║
-║  Problem                Feature Brief           User Flow &             Business Rules          Approved    ║
-║  Statement              & Workflow              Wireframe               Doc (with ID)           Hi-Fi       ║
-║  (Why & KPIs)           Tech Review             Prototype               Gherkin v0.9            Designs     ║
-║                                                                                             ║
-║                GATE: No Business Rules Final = No Dev (Enforced in Phase 2)                 ║
-╚═════════════════════════════════════════════════════════════════════════════════════════════╝
-                                              |
-                                              v
-╔═════════════════════════════════════════════════════════════════════════════════════════════╗
-║  PHASE 2: DEVELOPMENT & VERIFICATION                                                        ║
-║  Sổ tay: QTPTPM - SỔ TAY CHI TIẾT - DEVELOPMENT & VERIFICATION PHASE                        ║
-╠═════════════════════════════════════════════════════════════════════════════════════════════╣
-║                                                                                             ║
-║  Step 6    ->  Step 7   ->  Step 8   ->  Step 9   ->  Step 10  ->  Step 11  ->  Step 12    ║
-║  T3A &         Gherkin      Code &       Verify &     CI/CD &      Explore      Regression  ║
-║  Refinement    Enrichment   Test Gen     Refactor     Integ. Test  Testing      & Live      ║
-║      |             |            |            |            |            |            |       ║
-║      v             v            v            v            v            v            v       ║
-║  Refined       Gherkin      Code + Test  Tests Pass   Deploy Dev   Bug Reports  Release     ║
-║  Scope & T3A   Final (PE    (BR-ID Code  (Coverage    & Function   & BDD Gap    Branch &    ║
-║  Notes         Approved)    Traceable)   > 80%)       Test Pass    Reports      Reg. Pass   ║
-║                                                                                             ║
-║   [GATE 1]      [GATE 2]      [GATE]      [GATE 3]     [GATE 4]     [GATE 5]     [GATE 6]   ║
-║  T3A Scope     PE Approved  BR Comments  QE Sign-off  CI Pipeline  Exploratory  Stable Rel. ║
-║  Clarified     (CRITICAL)   Traceable    Sampling     Deploy Pass  Completed    (CRITICAL)  ║
-╚═════════════════════════════════════════════════════════════════════════════════════════════╝
-                                              |
-                                              v
-╔═════════════════════════════════════════════════════════════════════════════════════════════╗
-║  PHASE 3: RELEASE & MONITORING                                                              ║
-║  Sổ tay: QTPTPM - SỔ TAY CHI TIẾT - RELEASE & MONITORING PHASE                              ║
-╠═════════════════════════════════════════════════════════════════════════════════════════════╣
-║                                                                                             ║
-║     Step 13         -->       Step 14        -->       Step 15        -->       Step 16     ║
-║       UAT                 Handover to PST          Golive Release              Monitoring   ║
-║        |                         |                        |                         |       ║
-║        v                         v                        v                         v       ║
-║  UAT Sign-off             Handover Docs            Feature Live                Post-Launch  ║
-║  Document & Bugs          & KT Session             & Release Notes             Review Sync  ║
-║                                                                                             ║
-║      [GATE 7: PE Sign-off]         [GATE 8: PST Accept]          [GATE 9: Smoke Pass]       ║
-╚═════════════════════════════════════════════════════════════════════════════════════════════╝
-                                              |
-                                              v
-                              +-------------------------------+
-                              |         FEEDBACK LOOP         |
-                              | Update BDD Scenarios & BR Doc |
-                              |   Living Documentation Sync   |
-                              +---------------+---------------+
-                                              |
-                    +-------------------------+-------------------------+
-                    |                         |                         |
-                    v                         v                         v
-             [Minor Updates]           [Major Changes]            [New Feature]
-           Update Living Docs         Loop back Phase 2         Loop back Phase 1</div>
+╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║  PHASE 1: DISCOVERY & DEFINE SOLUTION                                                                                                             ║
+║  Sổ tay: QTPTPM - SỔ TAY CHI TIẾT - DISCOVERY & DEFINE SOLUTION PHASE                                                                             ║
+╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+║                                                                                                                                                   ║
+║        Step 1          -->        Step 2          -->        Step 3          -->        Step 4          -->        Step 5                         ║
+║   Identify Problems          Discover & Define          Build & Validate           Solution Design &          Develop UI/UX                       ║
+║   or Opportunities               Solutions                  Prototype                  Define BR                 Design                           ║
+║          |                           |                          |                          |                        |                             ║
+║          v                           v                          v                          v                        v                             ║
+║   Problem Statement            Feature Brief              User Flow &              Business Rules              Hi-Fi Designs                      ║
+║   (Why & KPIs)               Business Workflow             Wireframe                  Document                                                    ║
+║                               Tech Feasibility        Initial Tech Concept          Gherkin Draft v0.9                                            ║
+║                                Dependency List                                             H-TSP                                                  ║
+║                                                                                                                                                   ║
+║                                        GATE: No BR Final = No Dev (enforced in Phase 2)                                                           ║
+╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+                                                                         |
+                                                                         v
+╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║  PHASE 2: DEVELOPMENT & VERIFICATION                                                                                                              ║
+║  Sổ tay: QTPTPM - SỔ TAY CHI TIẾT - DEVELOPMENT & VERIFICATION PHASE                                                                              ║
+╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+║                                                                                                                                                   ║
+║     Step 6     -->     Step 7     -->     Step 8     -->     Step 9     -->     Step 10    -->     Step 11    -->          Step 12                ║
+║  T3A & Refine        Gherkin         Code & Test Gen    Verify & Refactor   CI/CD Integ. Test   Explore Testing     Regression & Ready for Live   ║
+║                                                                                                                                                   ║
+║         |                 |                  |                 |                   |                   |                         |                ║
+║         v                 v                  v                 v                   v                   v                         v                ║
+║   Refined Scope     Gherkin Final       Code + Tests      Tests Pass          Deploy Dev          Bug Reports             Release Branch          ║
+║     T3A Notes       (PE Approve)        BR Comments    (Coverage > 80%)    Function & Integ.        BDD Gap               Regression Pass         ║
+║                                                                                  Test                                                             ║
+║                                                                                                                                                   ║
+║                     GATE: PE Approve     GATE: BR       GATE: QE Approve    GATE: CI Pass       GATE: Exploratory       GATE: Stable Enough       ║
+║                       (CRITICAL)         Comments                                                   Complete                 (CRITICAL)           ║
+╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+                                                                         |
+                                                                         v
+╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║  PHASE 3: RELEASE & MONITORING                                                                                                                    ║
+║  Sổ tay: QTPTPM - SỔ TAY CHI TIẾT - RELEASE & MONITORING PHASE                                                                                    ║
+╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+║                                                                                                                                                   ║
+║          Step 13             -->           Step 14             -->           Step 15             -->           Step 16                        ║
+║            UAT                         Handover to PST                   Golive Release                       Monitoring                          ║
+║             |                                 |                                 |                                 |                               ║
+║             v                                 v                                 v                                 v                               ║
+║       UAT Sign-off                    Handover Sign-off                    Feature Live                   Post-Launch Review                      ║
+║         Bug List                      KT Recording Docs                    Release Notes                  Living Docs Sync                        ║
+║                                                                            Rollback Plan                                                          ║
+║                                                                                                                                                   ║
+║     GATE: PE Sign-off                 GATE: PST Accept                   GATE: Smoke Pass                                                         ║
+╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+                                                                         |
+                                                                         v
+                                                    +-----------------------------------------+
+                                                    |              FEEDBACK LOOP              |
+                                                    |      Update BDD Scenarios & BR Doc      |
+                                                    |        Living Docs Synchronized         |
+                                                    +--------------------+--------------------+
+                                                                         |
+                            +--------------------------------------------+--------------------------------------------+
+                            |                                            |                                            |
+                            v                                            v                                            v
+                     [Minor Updates]                              [Major Changes]                               [New Feature]
+                   Update Living Docs                           Loop back to Phase 2                         Loop back to Phase 1</div>
                 </div>
 
                 <div class="space-y-3 pt-4 border-t border-slate-100">
@@ -337,8 +406,8 @@
                                     <td class="font-medium whitespace-nowrap">Step 3</td>
                                     <td>Build and Validate Prototype</td>
                                     <td>Xây dựng wireframe/prototype, validate với user (optional)</td>
-                                    <td>User Flow & Wireframe, Hifi-Concept Test Result (optional), Technical Solution (initial concept)</td>
-                                    <td>PM (A/R), UX (A/R), Designer (R), PE (C), Dev (C), Team Lead (I)</td>
+                                    <td>User Flow & Wireframe, Hi-fi and Concept Test Result (optional), Technical Solution (initial concept)</td>
+                                    <td>PM (A/R), UX (A/R), Designer (R), PE (C), Dev Team (C), Team Lead (I)</td>
                                 </tr>
                                 <tr>
                                     <td class="font-medium whitespace-nowrap">Step 4</td>
@@ -351,11 +420,20 @@
                                     <td class="font-medium whitespace-nowrap">Step 5</td>
                                     <td>Develop UI/UX Design</td>
                                     <td>Phát triển Hi-Fi design, align với Business Rules và Gherkin Draft</td>
-                                    <td>Approved Designs, Updated UX Flow, High Fidelity UI Designs, Design Specs, UI State Variations</td>
+                                    <td>Approved Designs, Updated UX Flow, High-Fidelity UI Designs, Design Specs, UI State Variations</td>
                                     <td>PM (A), PE (R), UX (R), Designer (R), Dev Team (C), Team Lead (I)</td>
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg text-sm text-slate-700 space-y-1">
+                        <p class="font-semibold text-slate-900">Lưu ý quan trọng về Step 4:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li><strong>Gherkin Draft</strong> chỉ cần đủ để làm rõ business rules (happy cases + AC)</li>
+                            <li>Edge cases và exception cases sẽ được bổ sung trong Phase 2</li>
+                            <li><strong>Three Amigos Workshop</strong> sẽ diễn ra trong Phase 2 (Step 6)</li>
+                            <li>Finalize Gherkin sẽ thực hiện trong Phase 2 (Step 7) với sự tham gia của Dev & QE</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -389,7 +467,7 @@
                                     <td>Gherkin Enrichment</td>
                                     <td>Làm giàu Gherkin scenarios với edge cases, error handling, PE approve Gherkin Final</td>
                                     <td>Gherkin-{Feature}.feature (PE Approved), Coverage matrix, Approval record</td>
-                                    <td>PE (A/R), QE (A/R), Dev (R), Tech Lead (C), Team Lead (I)</td>
+                                    <td>PE (A/R), QE (A/R), Dev (R) - cả team phối hợp, Tech Lead (C), Team Lead (I)</td>
                                 </tr>
                                 <tr>
                                     <td class="font-medium whitespace-nowrap">Step 8</td>
@@ -409,25 +487,36 @@
                                     <td class="font-medium whitespace-nowrap">Step 10</td>
                                     <td>CI/CD & Integration Test</td>
                                     <td>Commit docs+code+test (Single Commit), PR review, merge to develop, CI/CD deploy Dev, Integration & Function Test</td>
-                                    <td>Git commit với traceability, PR approved, Code merged to develop, CI passed, Deployed app on Dev, Integration & Function Test</td>
-                                    <td>Dev (A/R), QE (A/R) - Integration & Function Test, DevOps (A/R) - CI/CD monitoring, Peer Developer (R)</td>
+                                    <td>Git commit với traceability, PR approved, Code merged to develop, CI passed, Deployed app on Dev, Integration & Function test results, QE sign-off</td>
+                                    <td>Dev (A/R), QE (A/R) - Integration & Function Test, DevOps (A/R) - CI/CD monitoring, Peer Developer (R) - PR review</td>
                                 </tr>
                                 <tr>
                                     <td class="font-medium whitespace-nowrap">Step 11</td>
                                     <td>Exploratory Testing</td>
                                     <td>Kiểm thử khám phá trên Dev environment, AI-assisted charter writing</td>
-                                    <td>Function test results, QE sign-off, Exploratory Testing Report, Charter, Session recordings, Bug reports (@exploratory_bug)</td>
+                                    <td>Exploratory Testing Report, Charter, Session recordings, Bug reports (@exploratory_bug), Recommendations for BDD enhancement</td>
                                     <td>QE (A/R), AI Tool (C), PE (C), Dev (C)</td>
                                 </tr>
                                 <tr>
                                     <td class="font-medium whitespace-nowrap">Step 12</td>
                                     <td>Regression Test & Ready for Live</td>
                                     <td>Verify "Stable Enough", tạo Release branch, deploy Staging, Regression test, Go-live & Rollback rehearsal</td>
-                                    <td>Stable Enough Verification Report, Release branch created, Regression Test Report, Go-live runbook, Final sign-off</td>
+                                    <td>Stable Enough Verification Report, Release branch created, Regression Test Report, Go-live runbook, Rollback runbook, Final sign-off từ QE, Tech Lead, PE, DevOps</td>
                                     <td>QE (A/R), Tech Lead (A/R), PE (A/R), DevOps (A/R), Security Team (C)</td>
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                    <div class="p-4 bg-blue-50 border-l-4 border-[#1a56db] rounded-r-lg space-y-1 text-sm text-slate-800">
+                        <p class="font-bold text-blue-900">CRITICAL GATES:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li><strong>Gate 1 (Step 6):</strong> T3A session completed với đầy đủ PE, Dev, QE; tất cả câu hỏi đã clarify</li>
+                            <li><strong>Gate 2 CRITICAL (Step 7):</strong> PE+QE approved Gherkin Final - No Gherkin Final = No Dev</li>
+                            <li><strong>Gate 3 (Step 9):</strong> QE sampling sign-off</li>
+                            <li><strong>Gate 4 (Step 10):</strong> CI Pass, QE sign-off (Integration & Function Test)</li>
+                            <li><strong>Gate 5 (Step 11):</strong> Exploratory testing complete</li>
+                            <li><strong>Gate 6 (Step 12):</strong> "Stable Enough" verified, Final sign-off</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -465,7 +554,7 @@
                                 </tr>
                                 <tr>
                                     <td class="font-medium whitespace-nowrap">Step 15</td>
-                                    <td>Golive Release</td>
+                                    <td>Golive - Release</td>
                                     <td>Deploy production, communication, feature flag management</td>
                                     <td>Feature live, Release notes, Rollback plan ready</td>
                                     <td>DevOps (R), PE (R), Dev (R)</td>
@@ -474,11 +563,19 @@
                                     <td class="font-medium whitespace-nowrap">Step 16</td>
                                     <td>Monitoring</td>
                                     <td>System monitoring, alert handling, hypercare, post-launch review, Living docs updated</td>
-                                    <td>Monitoring reports, Post-launch review</td>
+                                    <td>Monitoring reports, Post-launch review, Living docs updated</td>
                                     <td>DevOps (R), PST (R), PE (R)</td>
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                    <div class="p-4 bg-blue-50 border-l-4 border-[#1a56db] rounded-r-lg space-y-1 text-sm text-slate-800">
+                        <p class="font-bold text-blue-900">CRITICAL GATES:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li><strong>PE Sign-off</strong> (sau Step 13)</li>
+                            <li><strong>PST Accept</strong> (sau Step 14)</li>
+                            <li><strong>Smoke Pass</strong> (sau Step 15)</li>
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -503,7 +600,7 @@
                                 <tr>
                                     <td class="font-medium">G1</td>
                                     <td>Sau Step 6 (T3A & Refinement)</td>
-                                    <td>T3A session completed với đầy đủ PE, Dev, QE; Tất cả câu hỏi/ambiguity đã clarify; Scope và priority xác định rõ</td>
+                                    <td>T3A session completed với đầy đủ PE, Dev, QE; Tất cả câu hỏi/ambiguity đã clarify; Scope và priority xác định rõ; Technical solution confirmed</td>
                                     <td>Clarify lại với PM/PO, Re-schedule T3A</td>
                                 </tr>
                                 <tr>
@@ -516,7 +613,7 @@
                                     <td class="font-medium">G3</td>
                                     <td>Sau Step 9 (Verify & Refactor)</td>
                                     <td>All tests pass locally; Coverage >80%; QE sampling sign-off; Pass Function Test checklist</td>
-                                    <td>Fix code/tests, Re-run tests</td>
+                                    <td>Fix code/tests, Re-run tests, Get QE re-approval</td>
                                 </tr>
                                 <tr>
                                     <td class="font-medium">G4</td>
@@ -528,12 +625,12 @@
                                     <td class="font-medium">G5</td>
                                     <td>Sau Step 11 (Exploratory Testing)</td>
                                     <td>Session completed; All critical bugs logged; Findings analyzed; No blocker issues</td>
-                                    <td>Fix critical bugs, Re-test</td>
+                                    <td>Fix critical bugs, Update BDD (nếu cần), Re-test</td>
                                 </tr>
                                 <tr>
                                     <td class="font-medium text-blue-700 font-bold">G6 (CRITICAL)</td>
                                     <td>Sau Step 12 (Regression & Ready for Live)</td>
-                                    <td>Development đạt "Stable Enough"; Release branch tested trên Staging; Regression tests passed (>95%)</td>
+                                    <td>Development đạt "Stable Enough"; Release branch tested trên Staging; Regression tests passed (>95%); Final sign-off từ QE, Tech Lead, PE, DevOps</td>
                                     <td class="text-blue-700 font-bold">BLOCK GO-LIVE until fixed</td>
                                 </tr>
                                 <tr>
@@ -557,6 +654,26 @@
                             </tbody>
                         </table>
                     </div>
+                </div>
+
+                <div class="space-y-3 pt-4 border-t border-slate-100">
+                    <h3 class="text-base font-semibold text-slate-800">5.2 Gate Decision Flow</h3>
+                    <div class="bg-slate-900 text-slate-100 p-4 rounded-xl font-mono text-xs overflow-x-auto whitespace-pre leading-relaxed">GATE CHECK
+    |
+    +-------------------+
+    |                   |
+  [PASS]              [FAIL]
+    |                   |
+    V                   V
+Proceed to        [ Identify Root Cause ]
+Next Step               |
+        +---------------+---------------+
+        |               |               |
+     [Minor Fix]  [Major Issue]  [Scope Change]
+        |               |               |
+        V               V               V
+   Fix & Retry     Loop back to    Escalate to
+    Same Step     Previous Step   PM/Stakeholder</div>
                 </div>
             </section>
 
@@ -618,8 +735,8 @@
                                     <td>A/R</td>
                                     <td>-</td>
                                     <td>C</td>
-                                    <td>C (opt)</td>
-                                    <td>C (opt)</td>
+                                    <td>C (optional)</td>
+                                    <td>C (optional)</td>
                                     <td>R, I</td>
                                 </tr>
                                 <tr>
@@ -658,9 +775,9 @@
                                 <tr>
                                     <td class="font-medium">Step 6: T3A & Refinement</td>
                                     <td>I</td>
-                                    <td>R</td>
-                                    <td>R</td>
-                                    <td>R</td>
+                                    <td>R (explain)</td>
+                                    <td>R (participate)</td>
+                                    <td>R (test scenarios)</td>
                                     <td>C</td>
                                     <td>A (facilitate)</td>
                                     <td>I</td>
@@ -669,7 +786,7 @@
                                     <td class="font-medium">Step 7: Gherkin Enrichment</td>
                                     <td>I</td>
                                     <td>A/R</td>
-                                    <td>R</td>
+                                    <td>R (support)</td>
                                     <td>A/R</td>
                                     <td>C</td>
                                     <td>I</td>
@@ -680,7 +797,7 @@
                                     <td>I</td>
                                     <td>C</td>
                                     <td>A/R</td>
-                                    <td>R</td>
+                                    <td>R (BDD test gen)</td>
                                     <td>-</td>
                                     <td>I</td>
                                     <td>-</td>
@@ -700,16 +817,16 @@
                                     <td>I</td>
                                     <td>I</td>
                                     <td>A/R</td>
-                                    <td>A/R</td>
+                                    <td>A/R (Integ & Func Test)</td>
                                     <td>-</td>
                                     <td>I</td>
-                                    <td>A</td>
+                                    <td>A (CI/CD monitor)</td>
                                 </tr>
                                 <tr>
                                     <td class="font-medium">Step 11: Exploratory Testing</td>
                                     <td>I</td>
                                     <td>C</td>
-                                    <td>C</td>
+                                    <td>C (fix bugs)</td>
                                     <td>A/R</td>
                                     <td>-</td>
                                     <td>I</td>
@@ -719,7 +836,7 @@
                                     <td class="font-medium">Step 12: Regression & Ready for Live</td>
                                     <td>I</td>
                                     <td>A/R</td>
-                                    <td>R</td>
+                                    <td>R (fix bugs)</td>
                                     <td>A/R</td>
                                     <td>A/R</td>
                                     <td>I</td>
@@ -791,72 +908,245 @@
                             </tbody>
                         </table>
                     </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg text-sm text-slate-700 space-y-1">
+                        <p class="font-semibold text-slate-900">Chú thích:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li><strong>A</strong> = Accountable (Chịu trách nhiệm cuối cùng)</li>
+                            <li><strong>R</strong> = Responsible (Người thực hiện)</li>
+                            <li><strong>C</strong> = Consulted (Được tham vấn)</li>
+                            <li><strong>I</strong> = Informed (Được thông báo)</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
 
             <!-- 7. Nguyên tắc cốt lõi -->
-            <section id="nguyen-tac" class="bg-white rounded-xl shadow-sm p-6 md:p-8 border border-slate-200 space-y-6">
+            <section id="nguyen-tac" class="bg-white rounded-xl shadow-sm p-6 md:p-8 border border-slate-200 space-y-8">
                 <h2 class="text-xl font-bold text-slate-900 border-l-4 border-[#1a56db] pl-3">7. NGUYÊN TẮC CỐT LÕI</h2>
 
-                <div class="space-y-3">
+                <div class="space-y-4">
                     <h3 class="text-base font-semibold text-slate-800">7.1 Business Rules = Single Source of Truth</h3>
-                    <div class="p-3 bg-slate-100 rounded-lg font-mono text-xs text-slate-700">
-                        [Business Rules] ---> [Gherkin] ---> [Code] ---> [Test] (100% Traceability)
-                    </div>
+                    <div class="bg-slate-900 text-slate-100 p-4 rounded-xl font-mono text-xs overflow-x-auto whitespace-pre leading-relaxed">Business Rules Documents = SSOT
+|
++----+----+
+|    |    |
+Gherkin  Code  Test
+|
+100% Traceability</div>
                     <ul class="list-disc pl-5 space-y-1 text-sm text-slate-700">
-                        <li>Mọi quyết định về behavior phải dựa trên Business Rules được PE approve</li>
-                        <li>Code phải có comment gắn thẻ BR-ID, Test cases phải mapping 1-1 với BR-ID</li>
+                        <li>Mọi quyết định về behavior phải dựa trên Business Rules</li>
+                        <li>Business Rules phải được PE approve</li>
+                        <li>Code phải có BR-ID comments</li>
+                        <li>Test phải có tên tương ứng với BR-ID</li>
                     </ul>
                 </div>
 
-                <div class="space-y-3 pt-4 border-t border-slate-100">
+                <div class="space-y-4 pt-4 border-t border-slate-200">
                     <h3 class="text-base font-semibold text-slate-800">7.2 No Gherkin Final = No Dev</h3>
-                    <div class="p-3 bg-red-50 border-l-4 border-red-500 rounded-r-lg text-xs text-red-900 font-mono">
-                        GATE: Gherkin Final ready (PE+QE Approved)? -> NO -> Dev KHÔNG được phép viết code
-                    </div>
+                    <div class="bg-slate-900 text-slate-100 p-4 rounded-xl font-mono text-xs overflow-x-auto whitespace-pre leading-relaxed">Phase 1 Step 4: Gherkin Draft v0.9 (happy cases)
+|
+Phase 2 Step 6: T3A Session
+|
+Phase 2 Step 7: Gherkin Enrichment
+|
+GATE: Gherkin Final ready (PE+QE Approved)?
+|-- YES --> Step 8 (Code & Test Gen)
+|-- NO  --> Loop back (refine Gherkin)</div>
+                    <ul class="list-disc pl-5 space-y-1 text-sm text-slate-700">
+                        <li>Đây là Quality Gate quan trọng nhất</li>
+                        <li>PE+QE phải approve Gherkin Final trước khi Dev bắt đầu coding</li>
+                        <li>Gherkin Draft từ Phase 1 chỉ là bản nháp (happy cases)</li>
+                        <li>Gherkin Final từ Phase 2 Step 7 mới là bản hoàn chỉnh (bao gồm edge cases, error handling)</li>
+                    </ul>
                 </div>
 
-                <div class="space-y-3 pt-4 border-t border-slate-100">
+                <div class="space-y-4 pt-4 border-t border-slate-200">
                     <h3 class="text-base font-semibold text-slate-800">7.3 Single Commit Principle</h3>
-                    <p class="text-sm text-slate-700">Git commit bắt buộc phải chứa đầy đủ: <strong>Tài liệu BR + Gherkin Feature + Code Logic + Automation Test</strong>.</p>
+                    <div class="bg-slate-900 text-slate-100 p-4 rounded-xl font-mono text-xs overflow-x-auto whitespace-pre leading-relaxed">Git Commit:
+|-- docs/business-rules/BR-Domain-final.md
+|-- features/Gherkin-Feature.feature
+|-- src/Service.java (với BR comments)
+|-- test/Test.java</div>
+                    <ul class="list-disc pl-5 space-y-1 text-sm text-slate-700">
+                        <li>Docs + Gherkin + Code + Test trong 1 commit</li>
+                        <li>Đảm bảo traceability hoàn chỉnh</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4 pt-4 border-t border-slate-200">
+                    <h3 class="text-base font-semibold text-slate-800">7.4 Living Documentation</h3>
+                    <div class="bg-slate-900 text-slate-100 p-4 rounded-xl font-mono text-xs overflow-x-auto whitespace-pre leading-relaxed">BDD + Business Rules + Code + Tests
+|
+Living Documentation
+|
+Always in sync</div>
+                    <ul class="list-disc pl-5 space-y-1 text-sm text-slate-700">
+                        <li>Tài liệu luôn được cập nhật cùng code</li>
+                        <li>Feedback Loop sau mỗi release</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4 pt-4 border-t border-slate-200">
+                    <h3 class="text-base font-semibold text-slate-800">7.5 Progressive Improvement (Legacy Code)</h3>
+                    <div class="overflow-x-auto">
+                        <table class="table-custom w-full text-sm">
+                            <thead>
+                                <tr>
+                                    <th>Phase</th>
+                                    <th>Trạng thái</th>
+                                    <th>Giá trị</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="font-medium">Phase 1</td>
+                                    <td>Legacy: Messy code, No docs</td>
+                                    <td>0%</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-medium">Phase 2</td>
+                                    <td>Documentation: Docs + Gherkin</td>
+                                    <td>70%</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-medium">Phase 3</td>
+                                    <td>Refactored: Clean code + Tests</td>
+                                    <td>100%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="list-disc pl-5 space-y-1 text-sm text-slate-700">
+                        <li>Không cần refactor ngay</li>
+                        <li>Docs First, Code Later</li>
+                        <li>Chấp nhận messy code nếu đã có documentation</li>
+                    </ul>
                 </div>
             </section>
 
             <!-- 8. Links đến sổ tay chi tiết -->
-            <section id="links" class="bg-white rounded-xl shadow-sm p-6 md:p-8 border border-slate-200 space-y-6">
+            <section id="links" class="bg-white rounded-xl shadow-sm p-6 md:p-8 border border-slate-200 space-y-8">
                 <h2 class="text-xl font-bold text-slate-900 border-l-4 border-[#1a56db] pl-3">8. LINKS ĐẾN SỔ TAY CHI TIẾT</h2>
-                <div class="overflow-x-auto">
-                    <table class="table-custom w-full text-sm">
-                        <thead>
-                            <tr>
-                                <th>Tài liệu</th>
-                                <th>Mô tả</th>
-                                <th>Liên kết</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="font-medium">Sổ tay Phase 1</td>
-                                <td>Discovery & Define Solution Phase</td>
-                                <td><a href="https://citigo.atlassian.net/wiki/spaces/TR/pages/45076972359/QTPTPM+-+S+TAY+CHI+TI+T+DISCOVERY+DEFINE+SOLUTION+PHASE" target="_blank" class="text-blue-600 hover:underline font-medium">Chi tiết</a></td>
-                            </tr>
-                            <tr>
-                                <td class="font-medium">Sổ tay Phase 2</td>
-                                <td>Development & Verification Phase</td>
-                                <td><a href="https://citigo.atlassian.net/wiki/spaces/TR/pages/45077430624/QTPTPM+-+S+TAY+CHI+TI+T+DEVELOPMENT+VERIFICATION+PHASE" target="_blank" class="text-blue-600 hover:underline font-medium">Chi tiết</a></td>
-                            </tr>
-                            <tr>
-                                <td class="font-medium">Sổ tay Phase 3</td>
-                                <td>Release & Monitoring Phase</td>
-                                <td><a href="https://citigo.atlassian.net/wiki/spaces/TR/pages/45077430624/RELEASE+MONITORING+PHASE" target="_blank" class="text-blue-600 hover:underline font-medium">Chi tiết</a></td>
-                            </tr>
-                            <tr>
-                                <td class="font-medium">Quy trình Bàn giao Vận hành</td>
-                                <td>Quy trình Handover Dev sang PST</td>
-                                <td><a href="https://citigo.atlassian.net/wiki/spaces/TR/pages/44905529460/QUY+TR+NH+B+N+GIAO+V+N+H+NH" target="_blank" class="text-blue-600 hover:underline font-medium">Chi tiết</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
+
+                <div class="space-y-3">
+                    <h3 class="text-base font-semibold text-slate-800">8.1 Các sổ tay chi tiết theo Phase</h3>
+                    <div class="overflow-x-auto">
+                        <table class="table-custom w-full text-sm">
+                            <thead>
+                                <tr>
+                                    <th>Phase</th>
+                                    <th>Sổ tay</th>
+                                    <th>Link</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="font-medium">Phase 1</td>
+                                    <td>QTPTPM - SỔ TAY CHI TIẾT - DISCOVERY & DEFINE SOLUTION PHASE</td>
+                                    <td><a href="https://citigo.atlassian.net/wiki/spaces/TR/pages/45076972359/QTPTPM+-+S+TAY+CHI+TI+T+DISCOVERY+DEFINE+SOLUTION+PHASE" target="_blank" class="text-blue-600 hover:underline font-medium">Link</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="font-medium">Phase 2</td>
+                                    <td>QTPTPM - SỔ TAY CHI TIẾT - DEVELOPMENT & VERIFICATION PHASE</td>
+                                    <td><a href="https://citigo.atlassian.net/wiki/spaces/TR/pages/45077430624/QTPTPM+-+S+TAY+CHI+TI+T+DEVELOPMENT+VERIFICATION+PHASE" target="_blank" class="text-blue-600 hover:underline font-medium">Link</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="font-medium">Phase 3</td>
+                                    <td>QTPTPM - SỔ TAY CHI TIẾT - RELEASE & MONITORING PHASE</td>
+                                    <td><a href="https://citigo.atlassian.net/wiki/spaces/TR/pages/45077430624/RELEASE+MONITORING+PHASE" target="_blank" class="text-blue-600 hover:underline font-medium">Link</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="space-y-3 pt-4 border-t border-slate-200">
+                    <h3 class="text-base font-semibold text-slate-800">8.2 Tài liệu tham khảo</h3>
+                    <div class="overflow-x-auto">
+                        <table class="table-custom w-full text-sm">
+                            <thead>
+                                <tr>
+                                    <th>Tài liệu</th>
+                                    <th>Mô tả</th>
+                                    <th>Link</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="font-medium">QUY TRÌNH PTSP THEO BDD - OVERALL</td>
+                                    <td>Quy trình tổng quan Process</td>
+                                    <td><a href="https://citigo.atlassian.net/wiki/spaces/TR/pages/45043810327/QUY+TR+NH+PTSP+THEO+BDD+OVERALL" target="_blank" class="text-blue-600 hover:underline font-medium">Link</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="font-medium">QUY TRÌNH BÀN GIAO VẬN HÀNH</td>
+                                    <td>Chi tiết quy trình handover</td>
+                                    <td><a href="https://citigo.atlassian.net/wiki/spaces/TR/pages/44905529460/QUY+TR+NH+B+N+GIAO+V+N+H+NH" target="_blank" class="text-blue-600 hover:underline font-medium">Link</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="font-medium">BDD Guidelines</td>
+                                    <td>Hướng dẫn viết BDD</td>
+                                    <td class="text-slate-400">TBD</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-medium">Gherkin Rules</td>
+                                    <td>Quy tắc viết Gherkin</td>
+                                    <td class="text-slate-400">TBD</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="space-y-3 pt-4 border-t border-slate-200">
+                    <h3 class="text-base font-semibold text-slate-800">8.3 Templates</h3>
+                    <div class="overflow-x-auto">
+                        <table class="table-custom w-full text-sm">
+                            <thead>
+                                <tr>
+                                    <th>Template</th>
+                                    <th>Sử dụng trong Phase</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="font-medium">Feature Brief Template</td>
+                                    <td>Phase 1</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-medium">Business Rule Document Template</td>
+                                    <td>Phase 1, 2</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-medium">Gherkin Scenario Template</td>
+                                    <td>Phase 1, 2</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-medium">Code Comment Template</td>
+                                    <td>Phase 2</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-medium">Exploratory Testing Charter</td>
+                                    <td>Phase 2</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-medium">UAT Sign-off Document</td>
+                                    <td>Phase 3</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-medium">Handover Sign-off Document</td>
+                                    <td>Phase 3</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-medium">Release Checklist</td>
+                                    <td>Phase 3</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-medium">Post-Launch Review</td>
+                                    <td>Phase 3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </section>
 
