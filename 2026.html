@@ -186,252 +186,87 @@
                 </div>
             </section>
 
-            <!-- 3. Sơ đồ tổng thể (UI Flowchart - Responsive 100% không lệch) -->
-            <section id="so-do" class="bg-white rounded-xl shadow-sm p-6 md:p-8 border border-slate-200 space-y-8">
-                <div class="flex items-center justify-between border-b border-slate-100 pb-4">
-                    <h2 class="text-xl font-bold text-slate-900 border-l-4 border-[#1a56db] pl-3">3. SƠ ĐỒ TỔNG THỂ (MASTER FLOW)</h2>
-                    <span class="text-xs bg-blue-50 text-blue-700 font-semibold px-2.5 py-1 rounded-full border border-blue-200">Chuẩn quy trình BDD</span>
-                </div>
+            <!-- 3. Sơ đồ tổng thể -->
+            <section id="so-do" class="bg-white rounded-xl shadow-sm p-6 md:p-8 border border-slate-200 space-y-6">
+                <h2 class="text-xl font-bold text-slate-900 border-l-4 border-[#1a56db] pl-3">3. SƠ ĐỒ TỔNG THỂ</h2>
 
-                <div class="space-y-8">
-                    <!-- PHASE 1 -->
-                    <div class="border-2 border-blue-200 bg-blue-50/30 rounded-2xl p-5 space-y-4">
-                        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-blue-100 pb-3">
-                            <div>
-                                <span class="bg-blue-600 text-white text-xs font-bold px-2.5 py-1 rounded">PHASE 1</span>
-                                <h3 class="inline-block ml-2 text-sm md:text-base font-bold text-slate-800">DISCOVERY & DEFINE SOLUTION</h3>
-                            </div>
-                            <span class="text-xs text-slate-500 font-mono">Sổ tay: QTPTPM - Phase 1</span>
-                        </div>
-
-                        <!-- 5 Steps Flow -->
-                        <div class="grid grid-cols-1 md:grid-cols-5 gap-3">
-                            <!-- Step 1 -->
-                            <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-between">
-                                <div>
-                                    <span class="text-[11px] font-bold text-blue-600 block mb-1">STEP 01</span>
-                                    <h4 class="font-bold text-xs text-slate-800 mb-1">Identify Problems</h4>
-                                    <p class="text-[11px] text-slate-500">Business Objectives, KPIs</p>
-                                </div>
-                                <div class="mt-3 pt-2 border-t border-slate-100 text-[11px] font-medium text-slate-600 bg-slate-50 p-2 rounded">
-                                    <span class="text-slate-400 block text-[9px] uppercase">Output:</span> Problem Statement (Why & KPIs)
-                                </div>
-                            </div>
-                            <!-- Step 2 -->
-                            <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-between">
-                                <div>
-                                    <span class="text-[11px] font-bold text-blue-600 block mb-1">STEP 02</span>
-                                    <h4 class="font-bold text-xs text-slate-800 mb-1">Discover & Define</h4>
-                                    <p class="text-[11px] text-slate-500">Solutions & Workflow</p>
-                                </div>
-                                <div class="mt-3 pt-2 border-t border-slate-100 text-[11px] font-medium text-slate-600 bg-slate-50 p-2 rounded">
-                                    <span class="text-slate-400 block text-[9px] uppercase">Output:</span> Feature Brief & Business Workflow
-                                </div>
-                            </div>
-                            <!-- Step 3 -->
-                            <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-between">
-                                <div>
-                                    <span class="text-[11px] font-bold text-blue-600 block mb-1">STEP 03</span>
-                                    <h4 class="font-bold text-xs text-slate-800 mb-1">Build & Validate</h4>
-                                    <p class="text-[11px] text-slate-500">Prototypes & Concepts</p>
-                                </div>
-                                <div class="mt-3 pt-2 border-t border-slate-100 text-[11px] font-medium text-slate-600 bg-slate-50 p-2 rounded">
-                                    <span class="text-slate-400 block text-[9px] uppercase">Output:</span> User Flow & Wireframe Prototype
-                                </div>
-                            </div>
-                            <!-- Step 4 -->
-                            <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-between">
-                                <div>
-                                    <span class="text-[11px] font-bold text-blue-600 block mb-1">STEP 04</span>
-                                    <h4 class="font-bold text-xs text-slate-800 mb-1">Solution Design & BR</h4>
-                                    <p class="text-[11px] text-slate-500">Business Rules & Draft BDD</p>
-                                </div>
-                                <div class="mt-3 pt-2 border-t border-slate-100 text-[11px] font-medium text-slate-600 bg-slate-50 p-2 rounded">
-                                    <span class="text-slate-400 block text-[9px] uppercase">Output:</span> Business Rules Doc & Gherkin v0.9
-                                </div>
-                            </div>
-                            <!-- Step 5 -->
-                            <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-between">
-                                <div>
-                                    <span class="text-[11px] font-bold text-blue-600 block mb-1">STEP 05</span>
-                                    <h4 class="font-bold text-xs text-slate-800 mb-1">Develop UI/UX</h4>
-                                    <p class="text-[11px] text-slate-500">Hi-Fi Design Alignment</p>
-                                </div>
-                                <div class="mt-3 pt-2 border-t border-slate-100 text-[11px] font-medium text-slate-600 bg-slate-50 p-2 rounded">
-                                    <span class="text-slate-400 block text-[9px] uppercase">Output:</span> Approved Hi-Fi Designs & Specs
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Gate Phase 1 -->
-                        <div class="bg-amber-50 border border-amber-200 text-amber-900 rounded-lg p-2.5 text-xs font-semibold text-center flex items-center justify-center gap-2">
-                            <span class="bg-amber-500 text-white text-[10px] px-2 py-0.5 rounded font-bold uppercase">Gate Rule</span>
-                            No Business Rules Final = No Dev (Bắt buộc phê duyệt trước khi sang Phase 2)
-                        </div>
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-base font-semibold text-slate-800">3.1 Master Flow Diagram</h3>
+                        <span class="text-xs bg-slate-100 text-slate-500 font-medium px-2 py-1 rounded">Căn chỉnh Monospace chuẩn 100%</span>
                     </div>
 
-                    <!-- Arrow nối Phase 1 -> Phase 2 -->
-                    <div class="flex justify-center text-slate-400 -my-3">
-                        <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
-                    </div>
+                    <!-- Khung Master Flow đã căn thẳng tuyệt đối -->
+                    <div class="bg-slate-900 text-slate-100 p-4 md:p-6 rounded-xl font-mono-strict text-[11px] md:text-xs overflow-x-auto whitespace-pre leading-relaxed shadow-inner" style="font-variant-ligatures: none; letter-spacing: 0;">========================================================================================================================
+                                   QUY TRINH PHAT TRIEN SAN PHAM THEO BDD - KiotViet                                    
+                                                     (MASTER FLOW)                                                      
+========================================================================================================================
 
-                    <!-- PHASE 2 -->
-                    <div class="border-2 border-indigo-200 bg-indigo-50/30 rounded-2xl p-5 space-y-4">
-                        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-indigo-100 pb-3">
-                            <div>
-                                <span class="bg-indigo-600 text-white text-xs font-bold px-2.5 py-1 rounded">PHASE 2</span>
-                                <h3 class="inline-block ml-2 text-sm md:text-base font-bold text-slate-800">DEVELOPMENT & VERIFICATION</h3>
-                            </div>
-                            <span class="text-xs text-slate-500 font-mono">Sổ tay: QTPTPM - Phase 2</span>
-                        </div>
-
-                        <!-- 7 Steps Flow (Cuộn ngang nếu màn hình nhỏ) -->
-                        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2.5">
-                            <!-- Step 6 -->
-                            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-between">
-                                <div>
-                                    <span class="text-[10px] font-bold text-indigo-600 block">STEP 06</span>
-                                    <h4 class="font-bold text-xs text-slate-800 mt-1">T3A & Refine</h4>
-                                    <p class="text-[10px] text-slate-500 mt-0.5">Checklist & Scope</p>
-                                </div>
-                                <div class="mt-2 pt-2 border-t border-slate-100">
-                                    <span class="inline-block bg-slate-100 text-slate-700 text-[9px] font-bold px-1.5 py-0.5 rounded">G1: Clarified</span>
-                                </div>
-                            </div>
-                            <!-- Step 7 -->
-                            <div class="bg-white p-3 rounded-xl border-2 border-red-200 bg-red-50/20 shadow-xs flex flex-col justify-between">
-                                <div>
-                                    <span class="text-[10px] font-bold text-red-600 block">STEP 07</span>
-                                    <h4 class="font-bold text-xs text-slate-800 mt-1">Gherkin Final</h4>
-                                    <p class="text-[10px] text-slate-500 mt-0.5">Enrich Edge Cases</p>
-                                </div>
-                                <div class="mt-2 pt-2 border-t border-red-100">
-                                    <span class="inline-block bg-red-500 text-white text-[9px] font-bold px-1.5 py-0.5 rounded">G2: PE Approve</span>
-                                </div>
-                            </div>
-                            <!-- Step 8 -->
-                            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-between">
-                                <div>
-                                    <span class="text-[10px] font-bold text-indigo-600 block">STEP 08</span>
-                                    <h4 class="font-bold text-xs text-slate-800 mt-1">Code & Tests</h4>
-                                    <p class="text-[10px] text-slate-500 mt-0.5">BR-ID Traceable</p>
-                                </div>
-                                <div class="mt-2 pt-2 border-t border-slate-100">
-                                    <span class="inline-block bg-slate-100 text-slate-700 text-[9px] font-bold px-1.5 py-0.5 rounded">BR Tagged</span>
-                                </div>
-                            </div>
-                            <!-- Step 9 -->
-                            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-between">
-                                <div>
-                                    <span class="text-[10px] font-bold text-indigo-600 block">STEP 09</span>
-                                    <h4 class="font-bold text-xs text-slate-800 mt-1">Verify & Refactor</h4>
-                                    <p class="text-[10px] text-slate-500 mt-0.5">Coverage > 80%</p>
-                                </div>
-                                <div class="mt-2 pt-2 border-t border-slate-100">
-                                    <span class="inline-block bg-slate-100 text-slate-700 text-[9px] font-bold px-1.5 py-0.5 rounded">G3: Pass Tests</span>
-                                </div>
-                            </div>
-                            <!-- Step 10 -->
-                            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-between">
-                                <div>
-                                    <span class="text-[10px] font-bold text-indigo-600 block">STEP 10</span>
-                                    <h4 class="font-bold text-xs text-slate-800 mt-1">CI/CD Deploy</h4>
-                                    <p class="text-[10px] text-slate-500 mt-0.5">Dev Integration</p>
-                                </div>
-                                <div class="mt-2 pt-2 border-t border-slate-100">
-                                    <span class="inline-block bg-slate-100 text-slate-700 text-[9px] font-bold px-1.5 py-0.5 rounded">G4: Pipeline OK</span>
-                                </div>
-                            </div>
-                            <!-- Step 11 -->
-                            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-between">
-                                <div>
-                                    <span class="text-[10px] font-bold text-indigo-600 block">STEP 11</span>
-                                    <h4 class="font-bold text-xs text-slate-800 mt-1">Exploratory</h4>
-                                    <p class="text-[10px] text-slate-500 mt-0.5">Charter & Bug Sync</p>
-                                </div>
-                                <div class="mt-2 pt-2 border-t border-slate-100">
-                                    <span class="inline-block bg-slate-100 text-slate-700 text-[9px] font-bold px-1.5 py-0.5 rounded">G5: No Blocker</span>
-                                </div>
-                            </div>
-                            <!-- Step 12 -->
-                            <div class="bg-white p-3 rounded-xl border-2 border-red-200 bg-red-50/20 shadow-xs flex flex-col justify-between">
-                                <div>
-                                    <span class="text-[10px] font-bold text-red-600 block">STEP 12</span>
-                                    <h4 class="font-bold text-xs text-slate-800 mt-1">Regression</h4>
-                                    <p class="text-[10px] text-slate-500 mt-0.5">Stable for Live</p>
-                                </div>
-                                <div class="mt-2 pt-2 border-t border-red-100">
-                                    <span class="inline-block bg-red-500 text-white text-[9px] font-bold px-1.5 py-0.5 rounded">G6: Staging Pass</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Arrow nối Phase 2 -> Phase 3 -->
-                    <div class="flex justify-center text-slate-400 -my-3">
-                        <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
-                    </div>
-
-                    <!-- PHASE 3 -->
-                    <div class="border-2 border-emerald-200 bg-emerald-50/30 rounded-2xl p-5 space-y-4">
-                        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-emerald-100 pb-3">
-                            <div>
-                                <span class="bg-emerald-600 text-white text-xs font-bold px-2.5 py-1 rounded">PHASE 3</span>
-                                <h3 class="inline-block ml-2 text-sm md:text-base font-bold text-slate-800">RELEASE & MONITORING</h3>
-                            </div>
-                            <span class="text-xs text-slate-500 font-mono">Sổ tay: QTPTPM - Phase 3</span>
-                        </div>
-
-                        <!-- 4 Steps Flow -->
-                        <div class="grid grid-cols-1 md:grid-cols-4 gap-3">
-                            <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs">
-                                <span class="text-[11px] font-bold text-emerald-600 block mb-1">STEP 13</span>
-                                <h4 class="font-bold text-xs text-slate-800 mb-1">UAT Sign-off</h4>
-                                <p class="text-[11px] text-slate-500 mb-2">Exploratory & Design Check</p>
-                                <span class="inline-block bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">G7: PE Sign-off</span>
-                            </div>
-                            <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs">
-                                <span class="text-[11px] font-bold text-emerald-600 block mb-1">STEP 14</span>
-                                <h4 class="font-bold text-xs text-slate-800 mb-1">Handover PST</h4>
-                                <p class="text-[11px] text-slate-500 mb-2">KT Sessions & Ops Docs</p>
-                                <span class="inline-block bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">G8: PST Accept</span>
-                            </div>
-                            <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs">
-                                <span class="text-[11px] font-bold text-emerald-600 block mb-1">STEP 15</span>
-                                <h4 class="font-bold text-xs text-slate-800 mb-1">Golive Release</h4>
-                                <p class="text-[11px] text-slate-500 mb-2">Production Deployment</p>
-                                <span class="inline-block bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">G9: Smoke Pass</span>
-                            </div>
-                            <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs">
-                                <span class="text-[11px] font-bold text-emerald-600 block mb-1">STEP 16</span>
-                                <h4 class="font-bold text-xs text-slate-800 mb-1">Post-Launch Monitor</h4>
-                                <p class="text-[11px] text-slate-500 mb-2">Telemetry, Alert & Review</p>
-                                <span class="inline-block bg-slate-100 text-slate-700 text-[10px] font-bold px-2 py-0.5 rounded">Living Docs Sync</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- FEEDBACK LOOP -->
-                    <div class="border border-dashed border-slate-300 rounded-xl p-4 bg-slate-50 text-center space-y-3">
-                        <div class="inline-block bg-slate-800 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                            Feedback Loop (Living Documentation Sync)
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 pt-2 text-xs">
-                            <div class="bg-white p-2.5 rounded-lg border border-slate-200 shadow-xs">
-                                <span class="font-bold text-slate-700 block mb-0.5">Minor Updates</span>
-                                <span class="text-slate-500">Cập nhật trực tiếp Living Docs</span>
-                            </div>
-                            <div class="bg-white p-2.5 rounded-lg border border-slate-200 shadow-xs">
-                                <span class="font-bold text-blue-700 block mb-0.5">Major Changes</span>
-                                <span class="text-slate-500">Quay lại vòng lặp Phase 2</span>
-                            </div>
-                            <div class="bg-white p-2.5 rounded-lg border border-slate-200 shadow-xs">
-                                <span class="font-bold text-indigo-700 block mb-0.5">New Feature</span>
-                                <span class="text-slate-500">Bắt đầu chu trình mới từ Phase 1</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
++----------------------------------------------------------------------------------------------------------------------+
+|  PHASE 1: DISCOVERY & DEFINE SOLUTION                                                                                |
+|  So tay: QTPTPM - SO TAY CHI TIET - DISCOVERY & DEFINE SOLUTION PHASE                                                |
++----------------------------------------------------------------------------------------------------------------------+
+|                                                                                                                      |
+|      Step 1                 Step 2                 Step 3                 Step 4                 Step 5              |
+|     Identify       -->    Discover &      -->     Build &        -->     Solution       -->     Develop              |
+|     Problems              Define Sol.             Validate              Design & BR              UI/UX               |
+|        |                       |                      |                      |                     |                 |
+|        v                       v                      v                      v                     v                 |
+|     Problem              Feature Brief           User Flow &           Business Rules           Approved             |
+|    Statement              & Workflow              Wireframe             Doc (with ID)            Hi-Fi               |
+|   (Why & KPIs)            Tech Review             Prototype             Gherkin v0.9            Designs              |
+|                                                                                                                      |
+|                             GATE: No Business Rules Final = No Dev (Enforced in Phase 2)                             |
++----------------------------------------------------------------------------------------------------------------------+
+                                                           |                                                            
+                                                           v                                                            
++----------------------------------------------------------------------------------------------------------------------+
+|  PHASE 2: DEVELOPMENT & VERIFICATION                                                                                 |
+|  So tay: QTPTPM - SO TAY CHI TIET - DEVELOPMENT & VERIFICATION PHASE                                                 |
++----------------------------------------------------------------------------------------------------------------------+
+|                                                                                                                      |
+|    Step 6        Step 7        Step 8        Step 9       Step 10       Step 11       Step 12                        |
+|    T3A &   -->   Gherkin  -->   Code &   --> Verify &  --> CI/CD &   --> Explore   --> Regression                    |
+|  Refinement    Enrichment      Test Gen      Refactor    Integ Test     Testing        & Live                        |
+|      |             |              |             |             |             |             |                          |
+|      v             v              v             v             v             v             v                          |
+|   Refined       Gherkin      Code + Test   Tests Pass    Deploy Dev    Bug Reports     Release                       |
+| Scope & T3A    Final (PE)     Traceable     Coverage     & Function     & BDD Gap     Branch &                       |
+|    Notes        Approved        BR-ID         > 80%      Test Pass       Reports      Reg Pass                       |
+|                                                                                                                      |
+|   [GATE 1]      [GATE 2]       [GATE]       [GATE 3]      [GATE 4]      [GATE 5]      [GATE 6]                       |
+|  T3A Scope    PE Approved    BR Traceable  QE Sign-off   CI Pipeline   Exploratory   Stable Rel.                     |
+|  Clarified     (CRITICAL)      Comments      Sampling    Deploy Pass    Completed     (CRITICAL)                     |
++----------------------------------------------------------------------------------------------------------------------+
+                                                           |                                                            
+                                                           v                                                            
++----------------------------------------------------------------------------------------------------------------------+
+|  PHASE 3: RELEASE & MONITORING                                                                                       |
+|  So tay: QTPTPM - SO TAY CHI TIET - RELEASE & MONITORING PHASE                                                       |
++----------------------------------------------------------------------------------------------------------------------+
+|                                                                                                                      |
+|        Step 13                    Step 14                    Step 15                    Step 16                      |
+|          UAT           ----->  Handover to PST    ----->  Golive Release    ----->     Monitoring                    |
+|           |                           |                          |                          |                        |
+|           v                           v                          v                          v                        |
+|      UAT Sign-off               Handover Docs               Feature Live               Post-Launch                   |
+|    Document & Bugs               & KT Session             & Release Notes              Review Sync                   |
+|                                                                                                                      |
+|        [GATE 7: PE Sign-off]                [GATE 8: PST Accept]                [GATE 9: Smoke Pass]                 |
++----------------------------------------------------------------------------------------------------------------------+
+                                                           |                                                            
+                                                           v                                                            
+                                         +------------------------------------+                                         
+                                         |           FEEDBACK LOOP            |                                         
+                                         |   Update BDD Scenarios & BR Doc    |                                         
+                                         |     Living Documentation Sync      |                                         
+                                         +-----------------+------------------+                                         
+                                                           |                                                            
+                                 +-------------------------+-------------------------+                                 
+                                 |                         |                         |                                 
+                                 v                         v                         v                                 
+                          [Minor Updates]           [Major Changes]            [New Feature]                           
+                        Update Living Docs         Loop back Phase 2         Loop back Phase 1                         </div>
 
                 <div class="space-y-3 pt-4 border-t border-slate-100">
                     <h3 class="text-base font-semibold text-slate-800">3.2 Key Milestones</h3>
